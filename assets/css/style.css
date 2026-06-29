@@ -901,14 +901,15 @@ h2.display--light em { color: var(--gold-light); }
 }
 .ba-art-before, .ba-art-after { position: absolute; inset: 0; }
 .ba-art-before {
-  background: linear-gradient(160deg, rgba(13,21,32,.38) 0%, rgba(13,21,32,.58) 100%);
+  background: linear-gradient(160deg, rgba(13,21,32,.4) 0%, rgba(13,21,32,.6) 100%);
 }
 .ba-art-after {
   background:
-    radial-gradient(ellipse at 38% 32%, rgba(201,169,110,.28) 0%, transparent 55%),
-    linear-gradient(160deg, rgba(13,21,32,.12) 0%, rgba(13,21,32,.28) 100%);
+    radial-gradient(ellipse at 38% 32%, rgba(201,169,110,.16) 0%, transparent 55%),
+    linear-gradient(160deg, rgba(13,21,32,0) 0%, rgba(13,21,32,.06) 100%);
 }
-.ba-compare-pane:has(.ba-art-before) .ba-art-img { filter: saturate(.7) brightness(.9); }
+.ba-compare-pane:has(.ba-art-before) .ba-art-img { filter: saturate(.55) brightness(.78) contrast(.95); }
+.ba-compare-pane:has(.ba-art-after) .ba-art-img { filter: saturate(1.12) brightness(1.07) contrast(1.04); }
 .ba-compare .phil-lines { position: absolute; inset: 0; opacity: .07; }
 .ba-compare-after-pane {
   position: absolute;
