@@ -891,20 +891,24 @@ h2.display--light em { color: var(--gold-light); }
   touch-action: none;
   cursor: ew-resize;
 }
-.ba-compare-pane { position: absolute; inset: 0; }
+.ba-compare-pane { position: absolute; inset: 0; background: var(--navy-mid); }
+.ba-art-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 .ba-art-before, .ba-art-after { position: absolute; inset: 0; }
 .ba-art-before {
-  background:
-    radial-gradient(ellipse at 50% 65%, rgba(180,180,190,.16) 0%, transparent 60%),
-    var(--navy-mid);
-  filter: saturate(.65) brightness(.82);
+  background: linear-gradient(160deg, rgba(13,21,32,.38) 0%, rgba(13,21,32,.58) 100%);
 }
 .ba-art-after {
   background:
-    radial-gradient(ellipse at 38% 32%, rgba(201,169,110,.42) 0%, transparent 55%),
-    radial-gradient(ellipse at 72% 70%, rgba(232,213,183,.22) 0%, transparent 50%),
-    var(--navy-mid);
+    radial-gradient(ellipse at 38% 32%, rgba(201,169,110,.28) 0%, transparent 55%),
+    linear-gradient(160deg, rgba(13,21,32,.12) 0%, rgba(13,21,32,.28) 100%);
 }
+.ba-compare-pane:has(.ba-art-before) .ba-art-img { filter: saturate(.7) brightness(.9); }
 .ba-compare .phil-lines { position: absolute; inset: 0; opacity: .07; }
 .ba-compare-after-pane {
   position: absolute;
