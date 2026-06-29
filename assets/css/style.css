@@ -743,6 +743,21 @@ h2.display--light em { color: var(--gold-light); }
   overflow: hidden;
 }
 .content-visual .phil-art, .content-visual .phil-lines { position: absolute; inset: 0; }
+.content-visual img,
+.phil-visual img,
+.person-photo img,
+.blog-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: relative;
+  z-index: 0;
+}
+.content-visual .phil-art, .content-visual .phil-lines,
+.phil-visual .phil-art, .phil-visual .phil-lines { z-index: 1; }
+.person-photo, .blog-photo { position: relative; }
+.person-photo .phil-art, .person-photo .phil-lines,
+.blog-photo .phil-art, .blog-photo .phil-lines { display: none; }
 .prose { font-size: .92rem; line-height: 1.85; color: var(--text-muted); }
 .prose p { margin-bottom: 1.2rem; }
 .prose h3 {
